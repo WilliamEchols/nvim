@@ -82,11 +82,15 @@ require("lazy").setup({
 
     -- orgmode bullets
     { 'nvim-orgmode/org-bullets.nvim',
-        -- require('org-bullets').setup()
+      config = function()
+        require('org-bullets').setup()
+      end
     },
 
     -- nabla for unicode latex rendering
-    { 'jbyuki/nabla.nvim' }
+    { 'jbyuki/nabla.nvim' },
 
-    
+    -- fugitive for github integration 
+    { 'tpope/vim-fugitive' },
+   
 })
