@@ -36,5 +36,3 @@ vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true, silent = tr
 vim.keymap.set('n', '<leader>to', ':tabonly<CR>', { noremap = true, silent = true, desc = 'Close other tabs' })
 vim.keymap.set('n', '<tab>', ':tabnext<CR>', { noremap = true, silent = true, desc = 'Next tab' })
 vim.keymap.set('n', '<S-tab>', ':tabprevious<CR>', { noremap = true, silent = true, desc = 'Previous tab' })
-
--- Snippets

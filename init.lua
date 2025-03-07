@@ -27,6 +27,7 @@ require("lazy").setup({
   -- TODO: latex exporting (markdown file to proper, professional latex pdf)
   -- TODO: can we replace my use of org-agenda for calendar events and todo tracking?
   -- TODO: save cursor location/place in file (across sessions)
+  -- TODO: aiden? (specific plugin)
 
 }, {
   -- Lazy options

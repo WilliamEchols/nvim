@@ -10,18 +10,34 @@ opt.undofile = true      -- Persistent undo
 opt.ignorecase = true    -- Case insensitive searching
 opt.smartcase = true     -- Case sensitive when capitals used
 opt.signcolumn = "yes"   -- Always show sign column
-opt.updatetime = 0 --- 250     -- Faster completion
-opt.timeoutlen = 0 --- 300     -- Faster mapping timeout
+opt.updatetime = 250     -- Faster completion (default 4000ms)
+opt.timeoutlen = 300     -- Time to wait for mapped sequence to complete
+
+-- Visual Enhancements
+opt.cursorline = true    -- Highlight current line
+opt.termguicolors = true -- True color support
+opt.scrolloff = 8        -- Lines of context
+opt.sidescrolloff = 8    -- Columns of context
+opt.mouse = "a"          -- Enable mouse support
 
 -- Tabs & indentation
 opt.tabstop = 2          -- 2 spaces for tabs
 opt.shiftwidth = 2       -- 2 spaces for indent width
 opt.expandtab = true     -- Use spaces instead of tabs
 opt.smartindent = true   -- Smart indenting
+opt.wrap = true          -- Line wrap
+
+-- Search
+opt.hlsearch = true      -- Highlight search results
+opt.incsearch = true     -- Show search matches as you type
 
 -- Window splitting
 opt.splitright = true    -- Vertical splits to the right
 opt.splitbelow = true    -- Horizontal splits below
+
+-- File handling
+opt.autowrite = true     -- Auto save before commands like :next and :make
+opt.hidden = true        -- Enable modified buffers in background
 
 -- Water spray
 vim.keymap.set('n', '<Up>', function() vim.notify("Use k instead!", vim.log.levels.WARN) end, { noremap = true })

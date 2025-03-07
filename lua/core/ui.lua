@@ -121,21 +121,26 @@ ___     ___    ___   __  __ /\_\    ___ ___
     'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope [f]ind [f]iles' })
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope [f]ind [g]rep' })
-      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope [f]ind [b]uffers' })
-      vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope [f]ind [h]elp' })
+
+      -- top level
+      vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = '[f]ind' })
+
+      -- telescpe keymaps
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[f]ind [f]iles' })
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[f]ind [g]rep' })
+      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[f]ind [b]uffers' })
+      vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[f]ind [h]elp' })
     end
   },
-  { -- RSS feeds -- TODO: Finish configuring
-    "neo451/feed.nvim",
-    cmd = "Feed",
-    config = function()
-      require("feed").setup({
-        feeds = {
-          { "https://xkcd.com/rss.xml", name = "xkcd", tags = {} }
-        }
-      })
-    end
-  },
+  -- { -- RSS feeds -- NOTE: Finish configuring
+  --   "neo451/feed.nvim",
+  --   cmd = "Feed",
+  --   config = function()
+  --     require("feed").setup({
+  --       feeds = {
+  --         { "https://xkcd.com/rss.xml", name = "xkcd", tags = {} }
+  --       }
+  --     })
+  --   end
+  -- },
 }
