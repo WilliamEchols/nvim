@@ -32,7 +32,7 @@ return {
     end
   },
   { -- keymap completion recommendation
-    "folke/which-key.nvim", -- TODO: can we use icons in which-key?
+    "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
       preset = "helix",
@@ -106,13 +106,13 @@ ___     ___    ___   __  __ /\_\    ___ ___
     },
     keys = {}
   },
-  { -- latex rendering with Kitty Graphics Protocol
-    'Thiago4532/mdmath.nvim',
-    dependencies = {
-        'nvim-treesitter/nvim-treesitter',
-    },
-    opts = {}
-  },
+  -- { -- latex rendering with Kitty Graphics Protocol
+  --   'Thiago4532/mdmath.nvim',
+  --   dependencies = {
+  --       'nvim-treesitter/nvim-treesitter',
+  --   },
+  --   opts = {}
+  -- },
   { -- markdown
     "OXY2DEV/markview.nvim",
     lazy = false
